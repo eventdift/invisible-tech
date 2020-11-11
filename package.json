@@ -1,0 +1,30 @@
+{
+  "name": "invisible-tech",
+  "version": "1.0.0",
+  "description": "evaluate time and weather of input locations",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' app/src/index.ts -l"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eventdift/invisible-tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eventdift/invisible-tech/issues"
+  },
+  "homepage": "https://github.com/eventdift/invisible-tech#readme",
+  "devDependencies": {
+    "@types/node": "^11.9.5",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.0.2",
+    "@types/yargs": "^8.0.1",
+    "typescript": "^3.3.3333",
+    "yargs": "^13.2.2"
+  }
+}
