@@ -1,4 +1,9 @@
-export interface Evaluation {
+export interface Time {
   time: string
-  weather: string
 }
+
+export interface Weather {
+    weather: string
+}
+
+

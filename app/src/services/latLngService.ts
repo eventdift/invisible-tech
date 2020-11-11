@@ -1,6 +1,18 @@
 import  { Location }  from "../models/location";
+import { LatLng } from "../models/latLng";
 
-
-module.exports.latLngService = (location: Location) => {
+export class LatLngService {
+    location: Location;
+    latLng: LatLng = {
+            lat: "test",
+            lng: "test"
+        };
     
+    constructor(location: Location) {
+        this.location = location;
+    }
+
+    getLatLng() :LatLng{
+        return this.latLng;
+    }
 }

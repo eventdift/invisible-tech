@@ -1,4 +1,4 @@
-export interface latLng {
+export interface LatLng {
   lat: string
   lng: string
 }

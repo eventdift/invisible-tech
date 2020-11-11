@@ -1,4 +1,4 @@
 export interface Location {
-  locationName?: string
+  name?: string
   postalCode?: string
 }
