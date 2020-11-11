@@ -13,6 +13,7 @@ let argv = yargs
 
 
 console.log("fetching time and wheather for " + argv.location);
+console.log("------------------------------------------------------------------------");
 const locations = argv.location.split(',');
 
 let getTimeAndWheather = async(location: Location) => {
@@ -23,9 +24,9 @@ let getTimeAndWheather = async(location: Location) => {
         const time = await timeService.getTime();
         const wheatherService = new WeatherService(latLng);
         const temp = await wheatherService.getWheater();
-        console.log(location.name);
         return `The Weather in ${location.name} is ${temp.weather}°C, while time is ${time.time}`;
     } catch (e) {
+        console.log(e);
         return `No Weather info for:  ${location.name}`;
     }
 }
